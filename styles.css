@@ -11,27 +11,35 @@ p{
   color:white;
 }
 
-a{
+nav a{
+  background-color: #87ceeb85;
+  display: flex;
   text-decoration: none;
+  padding: 0px;
+  border: 5px solid skyblue;
+  font-size: 2rem;
+  height: 3rem;
+  width: 12rem;
+  align-items: center;
+  justify-content: center;
 }
-a:link, a:visited, a:focus {
+
+nav a:link, a:visited, a:focus {
   color:skyblue;
 }
-a:hover {
+nav a:hover {
   color:white;
+  background-color: #87ceeb42
+}
+nav a:active {
+  background-color: #ffffff00;
 }
 
 ul{
-  text-align: center;
-  width: 100%;
+  display: flex;
+  margin: 0 auto 0 auto;
+  justify-content: center;
 }
-
-
 li{
-  display: inline;
-  font-size: 2em;
-  margin-right: 2em;
-  background-color: #87ceeb85;
-  border-color: skyblue;
-  border-width: 10px;
+  display:inline;
 }
