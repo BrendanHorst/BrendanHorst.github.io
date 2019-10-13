@@ -5,18 +5,18 @@
 }
 
 body {
-  background-color: black;
+  background: radial-gradient(black, #00004a);
+  background-size: cover;
   margin: 0;
 }
 
-footer {
+/*footer {
   border-top: 5px solid skyblue;
   border-bottom: 5px solid skyblue;
   background-color: #437488;
   height: 3rem;
-}
-
-h1{
+}*/
+h1 {
   font-size: 3em;
   color: white;
   margin: 0;
@@ -36,57 +36,82 @@ header {
   padding: 0;
 }
 
-li{
-  display:inline;
+li {
+  display: inline;
   width: 20%;
+}
+
+li+li {
+  margin-left: 20px;
 }
 
 main {
   width: 80%;
-  border: 5px solid skyblue;
-  border-width: 0 5px 0 5px;
   margin: 0 auto 0 auto;
-  height: 50rem;
 }
 
-nav a{
-  background-color: #437488;
+nav a {
+  background: linear-gradient(#437488, #2a4b58);
+  box-shadow: 0 0 10px 0 skyblue;
   display: flex;
   text-decoration: none;
   padding: 0px;
   border: 5px solid skyblue;
-  border-width: 0 5px 0 5px;
+  border-radius: 5px;
+  border-width: 5px;
   font-size: 2rem;
   height: 3rem;
   width: 100%;
   align-items: center;
   justify-content: center;
+  transition: box-shadow .3s;
 }
 
 nav a:active {
   background-color: #000000;
 }
 
-nav a:focus, a:visited, a:link{
-  color:skyblue;
+nav a:focus, a:visited, a:link {
+  color: skyblue;
 }
 
 nav a:hover {
-  color:white;
-  background-color: #2a4b58
+  color: white;
+  background-color: #2a4b58;
+  box-shadow: 0 0 10px 5px skyblue;
 }
 
-p{
-  color:white;
+nav .line {
+  background-color: #375767;
+  box-shadow: inset 0 0 6px black;
+  width: 100%;
+  height: 10px;
+  position: relative;
+  bottom: 29px;
+  z-index: -1;
+}
+
+p {
+  color: white;
   text-align: center;
+  line-height: 1.5rem;
 }
 
-ul{
+ul {
   display: flex;
   justify-content: center;
   padding: 0;
   margin: 0;
-  border-top: 5px solid skyblue;
+  /*border-top: 5px solid skyblue;
   border-bottom: 5px solid skyblue;
-  background-color: #437488;
+  background-color: #437488;*/
+}
+
+article {
+  margin-top: 50px;
+  background: linear-gradient(#437488, #2a4b58);
+  box-shadow: 0 0 10px 0 skyblue;
+  border: 5px solid skyblue;
+  border-radius: 15px;
+  border-width: 5px;
 }
