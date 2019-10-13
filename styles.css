@@ -171,14 +171,21 @@ aside.contact a {
   font-weight: bold;
 }
 
-.projects .tetris h2 {
-
-}
-
 .projects > h2 {
   margin-top: 2rem;
   text-shadow: 0 0 5px skyblue;
   font-size: 3rem; d
+}
+
+.reviews a {
+  display: block;
+  font-size: 24px;
+  text-align: right;
+  margin-top: 30px;
+}
+
+.reviews a::after {
+  content: " →";
 }
 
 @media screen and (min-width: 1000px) {
