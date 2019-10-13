@@ -138,6 +138,14 @@ aside {
   padding: 2.5%;
 }
 
+aside.contact a {
+  display: flex;
+  justify-content: center;
+  font-size: 24px;
+}
+
+}
+
 .projects .tetris a {
   text-decoration: none;
   background: white;
