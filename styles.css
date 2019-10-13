@@ -83,12 +83,33 @@ nav a:hover {
 
 nav .line {
   background-color: #375767;
-  box-shadow: inset 0 0 6px black;
   width: 100%;
   height: 10px;
   position: relative;
   bottom: 29px;
+  z-index: -2;
+}
+
+nav .line .lineglow {
+  background-image: linear-gradient(to right,
+      #375767 0%,
+      skyblue 50%,
+      #375767 100%);
+  height: 100%;
+  width: 100px;
+  margin-left: -100px;
   z-index: -1;
+  animation: .5s linear 0s moveglow;
+}
+
+@keyframes moveglow {
+  from {
+    margin-left: -100px;
+  }
+
+  to {
+    margin-left: 100%;
+  }
 }
 
 p {
