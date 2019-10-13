@@ -23,6 +23,7 @@ h3 {
   text-align: center;
   font-size: 30px;
   margin-bottom: 2rem;
+  text-shadow: 3px 3px 5px black;
 }
 
 header {
@@ -138,12 +139,15 @@ aside {
   padding: 2.5%;
 }
 
+aside.contact {
+  width: 75%;
+  margin: 50px auto;
+}
+
 aside.contact a {
   display: flex;
   justify-content: center;
   font-size: 24px;
-}
-
 }
 
 .projects .tetris a {
@@ -167,6 +171,10 @@ aside.contact a {
   font-weight: bold;
 }
 
+.projects .tetris h2 {
+
+}
+
 .projects > h2 {
   margin-top: 2rem;
   text-shadow: 0 0 5px skyblue;
@@ -176,5 +184,21 @@ aside.contact a {
 @media screen and (min-width: 1000px) {
   main {
     max-width: 1000px;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .lineglow,
+  .line {
+    display: none;
+  }
+
+  nav li {
+    width: 80%;
+    margin: 5px auto;
+  }
+
+  ul {
+    flex-direction: column;
   }
 }
