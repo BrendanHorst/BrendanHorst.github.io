@@ -227,9 +227,14 @@ aside.contact a {
     display: none;
   }
 
-  nav li {
+  nav li,
+  nav .dropdown {
     width: 80%;
     margin: 5px auto;
+  }
+
+  .reviews header {
+    margin-top: 6rem;
   }
 
   ul {
