@@ -215,6 +215,11 @@ aside.contact a {
   margin-top: 2rem;
 }
 
+iframe {
+  display: block;
+  margin: 1rem auto;
+}
+
 @media screen and (min-width: 1000px) {
   main {
     max-width: 1000px;
@@ -245,5 +250,12 @@ aside.contact a {
 @media screen and (min-width: 600px) {
   nav ul.dropdown:hover li {
     display: inline;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  iframe {
+    float: right;
+    margin: 2rem;
   }
 }
