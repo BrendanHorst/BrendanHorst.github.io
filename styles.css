@@ -15,6 +15,7 @@ h1 {
   font-size: 3em;
   color: white;
   margin: 0;
+  text-shadow: 0 0 10px skyblue;
 }
 
 h2,
@@ -77,6 +78,28 @@ nav a:hover {
   color: white;
   background-color: #2a4b58;
   box-shadow: 0 0 10px 5px skyblue;
+}
+
+nav .dropdown {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+}
+
+nav .dropdown li + li {
+  margin: 0 auto;
+  display: none;
+}
+
+nav .dropdown li + li a {
+  background-image: none;
+  background-color: #1d2f38;
+}
+
+nav .dropdown li {
+  width: 100%;
+  margin: 0;
 }
 
 nav .line {
@@ -188,6 +211,10 @@ aside.contact a {
   content: " →";
 }
 
+.reviews header {
+  margin-top: 2rem;
+}
+
 @media screen and (min-width: 1000px) {
   main {
     max-width: 1000px;
@@ -207,5 +234,11 @@ aside.contact a {
 
   ul {
     flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  nav ul.dropdown:hover li {
+    display: inline;
   }
 }
