@@ -15,7 +15,17 @@ h1 {
   font-size: 3em;
   color: white;
   margin: 0;
-  text-shadow: 0 0 10px skyblue;
+  animation: shiny 2s ease-in-out infinite alternate;
+}
+
+@keyframes shiny {
+  from {
+    text-shadow: 0 0 0px skyblue;
+  }
+
+  to {
+    text-shadow: 0 0 20px skyblue;
+  }
 }
 
 h2,
@@ -220,17 +230,29 @@ iframe {
   margin: 1rem auto;
 }
 
+ol {
+  box-shadow: 3px 3px 3px black;
+  background-image: linear-gradient(to left, #808080 96%, #80808000 100%);
+  clear: both;
+}
+
 ol li {
   margin-left: 2rem;
   font-size: 24px;
   color: white;
   line-height: 1.5em;
   font-style: italic;
+  background-color: #525050;
 }
 
 ol li p {
   font-style: normal;
   text-align: left;
+  background-color: gray;
+}
+
+.addtopmargin {
+  margin-top: 3rem;
 }
 
 @media screen and (min-width: 1000px) {
