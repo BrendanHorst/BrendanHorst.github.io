@@ -2,103 +2,73 @@
 <html lang="en" dir="ltr">
 
 <head>
-  <meta charset="utf-8">
-  <title>Brendan Horst</title>
-  <link rel="stylesheet" href="../styles.css">
+    <meta charset="utf-8">
+    <title>Brendan Horst</title>
+    <link rel="stylesheet" href="../styles.css">
 </head>
 
 <body>
 
-  <header>
-    <h1>Brendan Horst</h1>
-  </header>
-  <nav>
-    <ul>
-      <li><a href="..">Home</a></li>
-      <li><a href="#">Projects</a></li>
-      <li>
-        <ul class="dropdown">
-          <li><a href="../reviews">Reviews</a></li>
-          <li><a href="../reviews/music">Music</a></li>
-          <li><a href="../reviews/videogames">Games</a></li>
+    <header>
+        <h1>Brendan Horst</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="..">Home</a></li>
+            <li><a href="#">Projects</a></li>
+            <li>
+                <ul class="dropdown">
+                    <li><a href="../reviews">Reviews</a></li>
+                    <li><a href="../reviews/music">Music</a></li>
+                    <li><a href="../reviews/videogames">Games</a></li>
+                </ul>
+            </li>
         </ul>
-      </li>
-    </ul>
 
-    <div class="line">
-      <div class="lineglow"></div>
-    </div>
-  </nav>
+        <div class="line">
+            <div class="lineglow"></div>
+        </div>
+    </nav>
 
-  <main class="projects">
+    <main class="projects">
 
-    <h2>Projects</h2>
+        <h2>Projects</h2>
 
-    <article class="tetris">
+        <article class="tetris">
 
-      <h3>Tetris in Javascript</h3>
+            <h3>Tetris in Javascript</h3>
 
-      <p>In high school I took AP Computer Software Principles, and for
-        our final project I and another student decided to try and recreate the
-        game Tetris using javascript. We used a website called CodeHS in class
-        so this was also using CodeHS's API.</p>
+            <p>In high school I took AP Computer Software Principles, and for our final project I and another student decided to try and recreate the game Tetris using javascript. We used a website called CodeHS in class so this was also using CodeHS's API.</p>
 
-      <p>Unfortunately, high school doesn't touch git or GitHub, and I don't have
-        the original source code for it anymore. But I did manage to find the
-        url for the CodeHS page that is hosting the project.</p>
+            <p>Unfortunately, high school doesn't touch git or GitHub, and I don't have the original source code for it anymore. But I did manage to find the url for the CodeHS page that is hosting the project.</p>
 
-      <a href="https://codehs.com/share/nBzucOinrT7WIc3OTSxO">Click here to play!</a>
+            <a href="https://codehs.com/share/nBzucOinrT7WIc3OTSxO">Click here to play!</a>
 
-      <p>You'll find that this isn't a very advanced version of Tetris. There's
-        no holding, no hard drops, and no bonus points for combos or t-spins.
-        Our goal for this project wasn't to introduce a revolutionary,
-        competitively-viable version of tetris, only to get it working and playable.
-        And we succeeded!</p>
+            <p>You'll find that this isn't a very advanced version of Tetris. There's no holding, no hard drops, and no bonus points for combos or t-spins. Our goal for this project wasn't to introduce a revolutionary, competitively-viable version of tetris,
+                only to get it working and playable. And we succeeded!</p>
 
-      <p>The parts that I worked on were the piece rotating, line clearing, and
-        piece order randomizer.</p>
+            <p>The parts that I worked on were the piece rotating, line clearing, and piece order randomizer.</p>
 
-      <p>At first I tried experimenting with piece rotation
-        by having each piece be a single object and rotating that object. Simple,
-        right? Well, when lines get cleared, it only clears the individual blocks,
-        not entire pieces, so each block whithin a piece had to be seperate.
-        What I did was put each piece into one of four states depending on what
-        direction is was visually facing, and what state the current piece was in
-        would determine how each square would move when the up button was pressed.</p>
+            <p>At first I tried experimenting with piece rotation by having each piece be a single object and rotating that object. Simple, right? Well, when lines get cleared, it only clears the individual blocks, not entire pieces, so each block whithin
+                a piece had to be seperate. What I did was put each piece into one of four states depending on what direction is was visually facing, and what state the current piece was in would determine how each square would move when the up button
+                was pressed.</p>
 
-      <p>Once the pieces themselves were figured out, as well as how they would
-        rotate, line clearing ended up being a lot simpler than I thought it would.
-        I just set up a loop that looked at each row, starting from the bottom,
-        and checked if every space in the row was occupied. If it returned true,
-        then I went through every single square with a y-value greater than the
-        current row and lowered their y-value by however many pixels a square was.
-        This loop would run every single time a piece locked into place. It's
-        not super efficient, but Tetris doesn't do a whole lot else so it wasn't
-        a problem.</p>
+            <p>Once the pieces themselves were figured out, as well as how they would rotate, line clearing ended up being a lot simpler than I thought it would. I just set up a loop that looked at each row, starting from the bottom, and checked if every
+                space in the row was occupied. If it returned true, then I went through every single square with a y-value greater than the current row and lowered their y-value by however many pixels a square was. This loop would run every single time
+                a piece locked into place. It's not super efficient, but Tetris doesn't do a whole lot else so it wasn't a problem.</p>
 
-      <p>The piece order randomizer was interesting. It seems obvious. There are
-        7 pieces, just randomly generate a number from 1 to 7 and deploy the piece
-        that corresponds with said number. That is what I did initially, but I
-        encountered a problem while testing. 100% randomness isn't very fun.
-        With only 7 pieces, it was not uncommon to get the same piece 2, 3, even
-        4 or more times in a row. Sometimes one specific piece would fail to
-        show up for long periods of time. After doing some research, I discovered
-        a solution. I would scramble the pieces in sets of 7. This way a piece
-        could only show up 2 times in a row at most, and two of the same piece
-        would never be more than 12 pieces apart. If you play it for yourself,
-        that's what the output below the game window is testing. </p>
+            <p>The piece order randomizer was interesting. It seems obvious. There are 7 pieces, just randomly generate a number from 1 to 7 and deploy the piece that corresponds with said number. That is what I did initially, but I encountered a problem
+                while testing. 100% randomness isn't very fun. With only 7 pieces, it was not uncommon to get the same piece 2, 3, even 4 or more times in a row. Sometimes one specific piece would fail to show up for long periods of time. After doing
+                some research, I discovered a solution. I would scramble the pieces in sets of 7. This way a piece could only show up 2 times in a row at most, and two of the same piece would never be more than 12 pieces apart. If you play it for yourself,
+                that's what the output below the game window is testing. </p>
 
-      <p>The only major problems with the program that I didn't get to fix before
-        AP test season came around were that there is no check if rotation is
-        possible before attempting to rotate, nor is there a check to see if
-        there are any squares in the way before moving horizontally, both of
-        which result in clipping. And it gets very buggy when clipping starts to
-        happen. But other than that, it's perfectly
-        playable!</p>
+            <p>The only major problems with the program that I didn't get to fix before AP test season came around were that there is no check if rotation is possible before attempting to rotate, nor is there a check to see if there are any squares in the
+                way before moving horizontally, both of which result in clipping. And it gets very buggy when clipping starts to happen. But other than that, it's perfectly playable!
+            </p>
 
-    </article>
+        </article>
 
-  </main>
+    </main>
 
 </body>
 
