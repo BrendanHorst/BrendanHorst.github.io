@@ -198,7 +198,7 @@ aside.contact a {
   font-weight: bold;
 }
 
-.projects > h2 {
+h2.pagetitle {
   font-size: 3rem;
   margin-top: 2rem;
   text-shadow: 0 0 5px skyblue;
@@ -217,6 +217,8 @@ aside.contact a {
 
 .reviews header {
   margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
 }
 
 iframe {
