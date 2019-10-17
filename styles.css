@@ -221,6 +221,11 @@ aside.contact a {
   margin-top: 2rem;
 }
 
+.albumart {
+  width: 100px;
+  height: 100px;
+}
+
 iframe {
   display: block;
   margin: 1rem auto;
