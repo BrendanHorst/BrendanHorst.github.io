@@ -72,18 +72,19 @@ nav a {
   transition: box-shadow .3s;
 }
 
-nav a:active {
-  background-color: #000000;
-}
-
 nav a:focus, a:visited, a:link {
   color: skyblue;
 }
 
 nav a:hover {
+  background-image: none;
   color: white;
   background-color: #2a4b58;
   box-shadow: 0 0 10px 5px skyblue;
+}
+
+nav a:active {
+  background-color: #1d313a;
 }
 
 nav .dropdown {
