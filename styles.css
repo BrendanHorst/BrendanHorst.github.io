@@ -94,18 +94,22 @@ nav .dropdown {
   width: 20%;
 }
 
-nav .dropdown li + li {
+nav .dropdown {
   display: none;
   margin: 0 auto;
 }
 
-nav .dropdown li + li a {
+nav .dropdown li a {
   background-color: #1d2f38;
   background-image: none;
 }
 
 nav .dropdown li {
   width: 100%;
+}
+
+nav .dropdown li + li {
+  margin-left: 0;
 }
 
 nav .line {
@@ -284,8 +288,8 @@ ol li p {
 }
 
 @media screen and (min-width: 600px) {
-  nav ul.dropdown:hover li {
-    display: inline;
+  nav li:last-of-type:hover .dropdown {
+    display: block;
   }
 }
 
