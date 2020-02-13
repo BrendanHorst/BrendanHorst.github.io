@@ -177,7 +177,7 @@ aside.contact a {
   justify-content: center;
 }
 
-.projects .tetris a {
+.projects a {
   align-items: center;
   background: white;
   border: thin solid black;
@@ -190,10 +190,14 @@ aside.contact a {
   justify-content: center;
   margin: 1rem auto;
   text-decoration: none;
+  width: 400px;
+}
+
+.projects .tetris a {
   width: 300px;
 }
 
-.projects .tetris a:hover {
+.projects a:hover {
   box-shadow: 0 0 6px white;
   font-weight: bold;
 }
